@@ -28,6 +28,12 @@ public class MovieController {
 		return response;
 		
 	}
+	@RequestMapping(value = "/demo", method = RequestMethod.GET)
+	public String demoMessage() {
+		String str = "Demo Messagae";
+		return str;
+
+	}
 	
 	@RequestMapping(value="/movieByName/{movieName}",method=RequestMethod.GET)
 	public @ResponseBody MovieResponse getMovieDEtails(@PathVariable String movieName){
